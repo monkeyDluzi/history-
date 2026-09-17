@@ -1,18 +1,50 @@
-body { 
-  margin: 0; 
-  min-height: 100vh; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  background-image: url('c604f07940ee811deb7642a7364f4588.gif'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  background-image: url('c604f07940ee811deb7642a7364f4588.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.momo-trust-display-regular { 
-  font-family: 'Momo Trust Display', sans-serif; 
-  font-weight: 400; 
-  font-style: normal; 
+/* Dark + blurred background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -10px;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.40),
+      rgba(0, 0, 0, 0.40)
+    ),
+    url('c604f07940ee811deb7642a7364f4588.gif');
+
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(4px);
+
+  z-index: -1;
 }
 
+/* Momo Trust Display */
+.momo-trust-display-regular {
+  font-family: 'Momo Trust Display', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Welcome paragraph */
+#welcome {
+  font-size: 24px;
+  text-align: center;
+}
