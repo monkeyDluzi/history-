@@ -1,11 +1,13 @@
 const music = document.getElementById("music");
+const button = document.getElementById("playMusic");
 
-document.getElementById("playMusic").addEventListener("click", function() {
-    music.play()
-        .then(() => {
-            console.log("Audio playing successfully.");
-        })
-        .catch(error => {
-            console.error("Playback failed:", error);
-        });
+button.addEventListener("click", function() {
+  if (music.paused) {
+    music.play();
+    button.textContent = "Pause Music";
+  } else {
+    music.pause();
+    button.textContent = "Play Music";
+  }
 });
+
