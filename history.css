@@ -45,6 +45,46 @@ body::before {
   font-style: normal;
 }
 
+
+header {
+    background-color: #3b2f2f;
+    color: white;
+    padding: 20px 50px;
+    border-bottom: 4px solid #c9a66b;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#heading {
+    font-size: 32px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #c9a66b;
+}
+
+#welcome {
+    text-align: center;
+    margin-top: 25px;
+}
+
+
 /* Welcome paragraph */
 #welcome {
   font-size: 24px;
