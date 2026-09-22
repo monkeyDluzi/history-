@@ -1,92 +1,370 @@
 @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
 
+
+/* ==================== BODY ==================== */
+
 body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin: 0;
+    min-height: 100vh;
 
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  color: white;
+    position: relative;
 
-  background-image: url("GIF's/c604f07940ee811deb7642a7364f4588.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    color: white;
+
+    background-image: url("GIF's/c604f07940ee811deb7642a7364f4588.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 /* Dark + blurred background */
+
 body::before {
-  content: "";
-  position: fixed;
-  inset: -10px;
+    content: "";
 
-  background-image:
-    linear-gradient(
-      rgba(0, 0, 0, 0.40),
-      rgba(0, 0, 0, 0.40)
-    ),
-    url("GIF's/c604f07940ee811deb7642a7364f4588.gif");
+    position: fixed;
+    inset: -10px;
 
-  background-size: cover;
-  background-position: center;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.40),
+            rgba(0, 0, 0, 0.40)
+        ),
+        url("GIF's/c604f07940ee811deb7642a7364f4588.gif");
 
-  filter: blur(4px);
+    background-size: cover;
+    background-position: center;
 
-  z-index: -1;
+    filter: blur(4px);
+
+    z-index: -1;
 }
 
-/* Momo Trust Display */
+
+/* ==================== FONT ==================== */
+
 .momo-trust-display-regular {
-  font-family: 'Momo Trust Display', sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Momo Trust Display', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
+
+/* ==================== HEADER ==================== */
 
 header {
+    width: 100%;
+    box-sizing: border-box;
+
     background-color: #3b2f2f;
     color: white;
+
     padding: 20px 50px;
+
     border-bottom: 4px solid #c9a66b;
 }
 
+
 .top-header {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
+    gap: 30px;
 }
+
+
+/* Website title */
 
 #heading {
     font-size: 32px;
     margin: 0;
 }
 
+
+/* Name under website title */
+
+.logo p {
+    margin: 5px 0 0;
+
+    color: #c9a66b;
+
+    font-size: 16px;
+}
+
+
+/* ==================== NAVIGATION ==================== */
+
 nav {
     display: flex;
+
     gap: 25px;
+
+    flex-wrap: wrap;
 }
+
 
 nav a {
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
+    transition: 0.3s;
 }
+
 
 nav a:hover {
     color: #c9a66b;
 }
 
-#welcome {
-    text-align: center;
+
+/* ==================== WELCOME ==================== */
+
+.welcome {
     margin-top: 25px;
 }
 
 
-/* Welcome paragraph */
 #welcome {
-  font-size: 24px;
-  text-align: center;
+    font-size: 24px;
+
+    text-align: center;
+
+    margin: 0;
+
+    color: #f5e6c8;
+}
+
+
+/* ==================== MAIN ==================== */
+
+main {
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+}
+
+
+/* ==================== SECTIONS ==================== */
+
+section {
+    background-color: rgba(59, 47, 47, 0.92);
+
+    padding: 35px;
+
+    margin-bottom: 35px;
+
+    border-radius: 15px;
+
+    border: 2px solid #c9a66b;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Section headings */
+
+section h2 {
+    color: #c9a66b;
+
+    font-size: 30px;
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    border-bottom: 2px solid #c9a66b;
+
+    padding-bottom: 10px;
+}
+
+
+/* Smaller headings */
+
+section h3 {
+    color: #f5e6c8;
+
+    font-size: 23px;
+
+    margin-top: 10px;
+}
+
+
+/* Paragraphs */
+
+section p {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #f5f5f5;
+}
+
+
+/* ==================== MOTHER'S SIDE ==================== */
+
+#mom {
+    padding: 10px;
+}
+
+
+/* Important introduction */
+
+#mom strong {
+    color: #c9a66b;
+
+    font-size: 18px;
+}
+
+
+/* ==================== TIMELINE ==================== */
+
+.timeline {
+    border-left: 4px solid #c9a66b;
+
+    padding-left: 25px;
+}
+
+
+.timeline p {
+    margin-bottom: 25px;
+}
+
+
+.timeline strong {
+    color: #c9a66b;
+}
+
+
+/* ==================== MUSIC BUTTON ==================== */
+
+#playMusic {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    background-color: #c9a66b;
+
+    color: #3b2f2f;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 25px;
+
+    font-family: 'Momo Trust Display', sans-serif;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s;
+}
+
+
+#playMusic:hover {
+    background-color: #f5e6c8;
+
+    transform: scale(1.05);
+}
+
+
+/* ==================== FOOTER ==================== */
+
+footer {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background-color: #3b2f2f;
+
+    border-top: 4px solid #c9a66b;
+
+    padding: 20px;
+
+    margin-top: auto;
+}
+
+
+footer p {
+    margin: 0;
+
+    color: #f5e6c8;
+}
+
+
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+
+    .top-header {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    nav {
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    #heading {
+        font-size: 26px;
+    }
+
+
+    #welcome {
+        font-size: 19px;
+    }
+
+
+    main {
+        width: 92%;
+    }
+
+
+    section {
+        padding: 25px 20px;
+    }
+
+
+    section h2 {
+        font-size: 25px;
+    }
+
+
+    section p {
+        font-size: 16px;
+    }
+
 }
